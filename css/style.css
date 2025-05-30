@@ -1,0 +1,13 @@
+body {
+    display: flex;
+}
+
+.container {
+    display: flex;
+}
+
+.square {
+    flex: 1 1 auto;
+    width: 80px;
+    height: 80px;
+}
