@@ -15,7 +15,6 @@ for (let i = 0; i < gridWidth; ++i) {
     for (let j = 0; j < gridWidth; ++j) {
         grid[i].push(document.createElement("div"));
         grid[i][j].className = "square";
-        grid[i][j].textContent = `${i}, ${j}`;
         rowCont.appendChild(grid[i][j]);
     }
     theContainer.appendChild(rowContainers[i]);
