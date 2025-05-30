@@ -5,14 +5,18 @@ const gridWidth = 16;
 const gridHeight = 16;
 
 let grid = [];
+let rowContainers = [];
 
 for (let i = 0; i < gridWidth; ++i) {
+    let rowCont = document.createElement("div");
+    rowCont.className = "rowContainer";
+    rowContainers.push(rowCont);
     grid.push([]);
     for (let j = 0; j < gridWidth; ++j) {
-        let square = document.createElement("div");
-        grid[i] = square;
-        grid[i].className = "square";
-        grid[i].textContent = `${i}, ${j}`;
-        theContainer.appendChild(grid[i]);
+        grid[i].push(document.createElement("div"));
+        grid[i][j].className = "square";
+        grid[i][j].textContent = `${i}, ${j}`;
+        rowCont.appendChild(grid[i][j]);
     }
+    theContainer.appendChild(rowContainers[i]);
 }
