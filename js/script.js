@@ -12,7 +12,7 @@ for (let i = 0; i < gridWidth; ++i) {
     rowCont.className = "rowContainer";
     rowContainers.push(rowCont);
     grid.push([]);
-    for (let j = 0; j < gridWidth; ++j) {
+    for (let j = 0; j < gridHeight; ++j) {
         grid[i].push(document.createElement("div"));
         grid[i][j].className = "square";
         rowCont.appendChild(grid[i][j]);

@@ -4,20 +4,30 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 95%;
+    height: 95%;
+}
+
+body,
 .container {
-    display: flex;
-    flex-flow: column;
     width: 100%;
     height: 100%;
 }
 
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
 .rowContainer {
     display: flex;
+    flex: 1;
 }
 
 .square {
-    flex: 0 1 5.3%;
-    min-height: 55px;
+    flex: 1;
+    padding: 10px;
     border: 2px solid lightgrey;
 }
 
