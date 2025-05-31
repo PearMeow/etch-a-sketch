@@ -36,4 +36,16 @@ function deleteGrid() {
     rowContainers.length = 0;
 }
 
+function userGenGrid() {
+    let theSize = newSize.value;
+    if (theSize > 100) theSize = 100;
+    if (theSize < 0) theSize = 0;
+    newSize.value = 0;
+    genGrid(theSize, theSize);
+}
+
+const btn = document.querySelector("button");
+const newSize = document.querySelector("input");
+btn.addEventListener("click", userGenGrid);
+
 genGrid();
