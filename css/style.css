@@ -43,8 +43,3 @@ button {
     max-width: height;
     border: 2px solid lightgrey;
 }
-
-.square:hover {
-    background-color: orange;
-    border: 2px solid black;
-}

@@ -15,8 +15,10 @@ function genGrid(gridWidth = 16, gridHeight = 16) {
         rowContainers.push(rowCont);
         grid.push([]);
         for (let j = 0; j < gridHeight; ++j) {
-            grid[i].push(document.createElement("div"));
-            grid[i][j].className = "square";
+            let newDiv = document.createElement("div");
+            grid[i].push(newDiv);
+            newDiv.className = "square";
+            newDiv.addEventListener("mouseenter", () => newDiv.style.backgroundColor = "black");
             rowCont.appendChild(grid[i][j]);
         }
         theContainer.appendChild(rowContainers[i]);
@@ -47,5 +49,7 @@ function userGenGrid() {
 const btn = document.querySelector("button");
 const newSize = document.querySelector("input");
 btn.addEventListener("click", userGenGrid);
+
+ddiv = document.createElement("div");
 
 genGrid();
